@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/stylesig.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="signup-section">
+            <div class="logo">
+                <img src="{% static 'image/gdgg.png' %}" alt="Diprella Logo">
+            </div>
+            <h2>Create Your Doctor Account</h2>
+            
+            <form class="signup-form">
+                <p>Name:</p>
+                <input type="text" placeholder="Full Name" required>
+                
+                <p>License Number:</p>
+                <input type="text" placeholder="License Number" required>
+
+                <p>Affiliated Hospital:</p>
+                <input type="text" placeholder="Hospital Name" required>
+
+                <p>Email:</p>
+                <input type="email" placeholder="Email" required>
+
+                <p>Password:</p>
+                <input type="password" placeholder="Password" required>
+
+                <p>Date of Birth:</p>
+                <input type="date" required>
+
+                <button type="submit" class="sign-up-btn">Sign Up</button>
+            </form>
+        </div>
+        <div class="login-section">
+            <h2>Already Have an Account?</h2>
+            <a href="/login"><button class="sign-in-btn">Login</button></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eef2f7;
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.signup-section, .login-section {
+    padding: 50px;
+}
+
+.signup-section {
+    width: 60%;
+    border-right: 1px solid #eee;
+    text-align: center;
+}
+
+.logo img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.signup-form input {
+    display: block;
+    width: 85%;
+    margin: 15px auto;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.signup-form input:focus {
+    border-color: #00cc99;
+    outline: none;
+    background-color: #fff;
+}
+
+.sign-up-btn {
+    background-color: #00cc99;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 85%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.sign-up-btn:hover {
+    background-color: #009977;
+}
+
+.login-section {
+    width: 40%;
+    background: linear-gradient(135deg, #00cc99, #00a3e2);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-section h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.login-section p {
+    color: white;
+    font-size: 16px;
+}
+
+.sign-in-btn {
+    background-color: white;
+    color: #00a3e2;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: #00a3e2;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .signup-section, .login-section {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .login-section {
+        border-radius: 0;
+    }
+}

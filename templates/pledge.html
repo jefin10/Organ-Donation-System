@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pledge to be an Organ Donor</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styleple.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="donor-section">
+            <div class="logo">
+                <img src="logo.png" alt="Medical Logo">
+            </div>
+            <h2>Pledge to be an Organ Donor</h2>
+            <p>Please be aware that this Organ Donor Card is not a living donor card.</p>
+            
+            <form class="donor-form">
+                <p>Name* (As it appears on government ID)</p>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Middle Name">
+                <input type="text" placeholder="Last Name" required>
+
+                <p>Mother's/Father's Name*</p>
+                <input type="text" placeholder="Mother's/Father's Name" required>
+
+                <p>Current Residential Address*</p>
+                <input type="text" placeholder="House Number/Flat Number, Society Name" required>
+                <input type="text" placeholder="Street Address, Landmark" required>
+                <input type="text" placeholder="City" required>
+                <input type="text" placeholder="District" required>
+                <input type="text" placeholder="State" required>
+                <input type="text" placeholder="PIN Code" required>
+
+                <p>Mobile Number*</p>
+                <input type="text" placeholder="Mobile Number" required>
+
+                <p>Occupation*</p>
+                <select required>
+                    <option value="" disabled selected>--- Select ---</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Engineer">Engineer</option>
+                    <option value="Student">Student</option>
+                    <option value="Others">Others</option>
+                </select>
+
+                <p>Email*</p>
+                <input type="email" placeholder="Email" required>
+
+                <p>Date Of Birth*</p>
+                <input type="date" required>
+
+                <p>Age*</p>
+                <input type="number" placeholder="Age" required>
+
+                <p>Gender*</p>
+                <select required>
+                    <option value="" disabled selected>--- Select ---</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <p>Blood Group*</p>
+                <select required>
+                    <option value="" disabled selected>--- Select ---</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+
+                <p>Emergency Contact Name*</p>
+                <input type="text" placeholder="Emergency Contact Name" required>
+
+                <p>Emergency Contact Number*</p>
+                <input type="text" placeholder="Emergency Contact Number" required>
+
+                <p>Emergency Contact Address*</p>
+                <input type="text" placeholder="Emergency Contact Address" required>
+
+                <label>
+                    <input type="checkbox"> Person's Address and Emergency Contact's Address is same
+                </label>
+
+                <p>Choose Identity Card*</p>
+                <select required>
+                    <option value="" disabled selected>-------Select One -------</option>
+                    <option value="Aadhar">Aadhar Card</option>
+                    <option value="Passport">Passport</option>
+                    <option value="Driving License">Driving License</option>
+                </select>
+
+                <p>Enter Identity Card Number*</p>
+                <input type="text" placeholder="Enter Identity Card Number" required>
+
+                <p>Organs that I wish to donate:*</p>
+                <label><input type="checkbox"> All Organs</label>
+                <label><input type="checkbox"> Corneas (Eyes)</label>
+                <label><input type="checkbox"> Kidneys</label>
+                <label><input type="checkbox"> Heart</label>
+                <label><input type="checkbox"> Lungs</label>
+                <label><input type="checkbox"> Liver</label>
+                <label><input type="checkbox"> Pancreas</label>
+                <label><input type="checkbox"> Small Intestine</label>
+                <label><input type="checkbox"> Skin</label>
+                <label><input type="checkbox"> Hand</label>
+
+                <p>Social Media Profile Link (Optional)</p>
+                <input type="url" placeholder="Facebook/Instagram/Twitter">
+
+                <p>Where did you hear about us?*</p>
+                <select required>
+                    <option value="" disabled selected>--- Select ---</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Advertisement">Advertisement</option>
+                </select>
+
+                <label>
+                    <input type="checkbox" required> I declare that I am a citizen of India and above 18 years of age.
+                </label>
+
+                <label>
+                    <input type="checkbox" required> I agree to the privacy policy.
+                </label>
+
+                <button type="submit" class="donor-signup-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

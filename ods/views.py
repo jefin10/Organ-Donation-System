@@ -23,6 +23,7 @@ def doctor_login_view(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
+        dsadas
 
         try:
             login_user = LoginInfo.objects.get(username=username)

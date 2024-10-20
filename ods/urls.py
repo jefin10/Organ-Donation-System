@@ -17,11 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from  . import views
+from .views import doctor_login_view, doctor_detail_view,login
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home),
-    path('login/',views.login),
-    path('signup/',views.signup),
-    path('pledge/',views.pledge)
+    path('signup/',views.signup,name='signup'),
+    path('pledge/',views.pledge),
+    path('login/', views.login, name='doctor_login'),
+    path('doctor/view', doctor_detail_view, name='doctor_detail'),
+    path('logout/', views.doctor_logout_view, name='logout'),  
+
+
     
 ]

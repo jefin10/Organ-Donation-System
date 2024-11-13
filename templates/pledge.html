@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organ Donation Pledge</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pledge.css ' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="signup-section">
+            <div class="logo">
+                <img src="{% static 'images/logo.png ' %}"/>
+            </div>
+            <h2>Pledge to Donate Life</h2>
+            
+            <form method = "POST" class="signup-form">
+                {% csrf_token %}
+                <p>Full Name:</p>
+                <input name="name" type="text" placeholder="Full Name" required>
+                
+                <p>Address:</p>
+                <textarea name="address" placeholder="Full Address" required></textarea>
+
+                <p>Pin Code:</p>
+                <input name="pincode" type="text" pattern="[0-9]{6}" placeholder="6-digit Pin Code" required>
+
+                <p>Phone Number:</p>
+                <input name="phone_no" type="tel" pattern="[0-9]{10}" placeholder="Phone Number" required>
+
+                <p>Email:</p>
+                <input name="email" type="email" placeholder="Email" required>
+
+                <p>Date of Birth:</p>
+                <input name="dob" type="date" required>
+
+                <p>Age:</p>
+                <input name="age" type="number" min="18" max="120" placeholder="Age" required>
+
+                <p>Gender:</p>
+                <select name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <p>Organs I Wish to Donate:</p>
+                <div class="organ-checkboxes">
+                    <label><input type="checkbox" name="organs" value="all"> All Organs</label>
+                    <label><input type="checkbox" name="organs" value="corneas"> Corneas (Eyes)</label>
+                    <label><input type="checkbox" name="organs" value="kidneys"> Kidneys</label>
+                    <label><input type="checkbox" name="organs" value="heart"> Heart</label>
+                    <label><input type="checkbox" name="organs" value="lungs"> Lungs</label>
+                    <label><input type="checkbox" name="organs" value="liver"> Liver</label>
+                    <label><input type="checkbox" name="organs" value="pancreas"> Pancreas</label>
+                    <label><input type="checkbox" name="organs" value="small_intestine"> Small Intestine</label>
+                    <label><input type="checkbox" name="organs" value="skin"> Skin</label>
+                    <label><input type="checkbox" name="organs" value="hands"> Hands</label>
+                </div>
+
+                <div class="age-confirmation">
+                    <label>
+                        <input type="checkbox" required>
+                        I confirm that I am 18 years or older
+                    </label>
+                </div>
+
+                <button type="submit" class="sign-up-btn">Submit Pledge</button>
+            </form>
+        </div>
+        <div class="login-section">
+            <h2>Go back to home</h2>
+            <a href="/home"><button class="sign-in-btn">Home</button></a>
+        </div>
+    </div>
+</body>
+</html>
